@@ -1,4 +1,4 @@
-name: "ControlMySpa HA MQTT"
+name: "ControlMySpa HA MQTT (viriol fork)"
 description: "ControlMySpa MQTT Bridge"
 version: "1.0.7"
 slug: "controlmyspa_ha_mqtt"
