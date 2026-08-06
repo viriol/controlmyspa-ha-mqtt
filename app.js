@@ -687,6 +687,10 @@ class App extends EventEmitter {
 
   setHeaterMode(payload) {
     let self = this;
+    if (payload === 'TOGGLE') {
+      self.spa.toggleHeaterMode();
+      return;
+    }
     let desiredMode = payload === 'heat' ? 'READY' : 'REST';
     self.spa.setHeaterMode(desiredMode);
   }
