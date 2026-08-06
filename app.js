@@ -638,7 +638,7 @@ class App extends EventEmitter {
         self.spa.updateSpa();
         break;
       case 'heaterMode': 
-        self.toggleHeaterMode(payload);
+        self.setHeaterMode(payload);
         break;
       case 'tempRange':
         self.setTempRange(payload);
@@ -685,9 +685,10 @@ class App extends EventEmitter {
     self.spa.syncTime();
   }
 
-  toggleHeaterMode(payload) {
+  setHeaterMode(payload) {
     let self = this;
-    self.spa.toggleHeaterMode();
+    let desiredMode = payload === 'heat' ? 'READY' : 'REST';
+    self.spa.setHeaterMode(desiredMode);
   }
 
   setTempRange(payload) {
