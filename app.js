@@ -461,7 +461,7 @@ class App extends EventEmitter {
     let stateTopic = `controlmyspa/${spaId}/spa`;
     let objectId = `${spaId}_${attrSnakeCase}`;
     let uniqueId = `controlmyspa_${objectId}_sensor`;
-    let valueTemplate = `{% if value_json.${attribute} is defined %}{{ value_json.${attribute} }}{% else %}unknown{% endif %}`
+    let valueTemplate = `{% if value_json.${attribute} is defined %}{{ value_json.${attribute} }}{% else %}None{% endif %}`
     let config = {
       "unique_id": uniqueId,
       "object_id": objectId,
